@@ -1,0 +1,128 @@
+{#
+  /**
+  * @file
+  * Theme override to display a single page.
+  *
+  * The doctype, html, head and body tags are not in this template. Instead they
+  * can be found in the html.html.twig template in this directory.
+  *
+  * Available variables:
+  *
+  * General utility variables:
+  * - base_path: The base URL path of the Drupal installation. Will usually be
+  *   "/" unless you have installed Drupal in a sub-directory.
+  * - is_front: A flag indicating if the current page is the front page.
+  * - logged_in: A flag indicating if the user is registered and signed in.
+  * - is_admin: A flag indicating if the user has permission to access
+  *   administration pages.
+  *
+  * Site identity:
+  * - front_page: The URL of the front page. Use this instead of base_path when
+  *   linking to the front page. This includes the language domain or prefix.
+  *
+  * Page content (in order of occurrence in the default page.html.twig):
+  * - messages: Status and error messages. Should be displayed prominently.
+  * - node: Fully loaded node, if there is an automatically-loaded node
+  *   associated with the page and the node ID is the second argument in the
+  *   page's path (e.g. node/12345 and node/12345/revisions, but not
+  *   comment/reply/12345).
+  *
+  *
+  * @see template_preprocess_page()
+  * @see html.html.twig
+  */
+  #}
+
+
+<div class="video-background">
+  <div class="video-foreground">
+    <video autoplay loop>
+      <source src="/themes/barbz/images/laptop.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
+</div>
+
+
+<section class="home-header">
+  <div class="row">
+    <div class="col-md-8 col-md-push-2">
+      <div id="coverimg1" class="header-box is-large">
+        <div class="header-box-content">
+          <div class="header-box-text">
+            <div class="site-header-content">
+              <h1 class="site-title">
+                {{ site_name }}
+              </h1>
+              <h2 class="site-description">
+                {{ site_slogan }}
+              </h2>
+            </div>
+          </div>
+        </div>
+        <a data-scroll href="#content" class="arrow animated bounce">
+          <img width="40" height="40" alt="" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNi4wLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB3aWR0aD0iNTEycHgiIGhlaWdodD0iNTEycHgiIHZpZXdCb3g9IjAgMCA1MTIgNTEyIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCA1MTIgNTEyIiB4bWw6c3BhY2U9InByZXNlcnZlIj4NCjxwYXRoIGZpbGw9IiNGRkZGRkYiIGQ9Ik0yOTMuNzUxLDQ1NS44NjhjLTIwLjE4MSwyMC4xNzktNTMuMTY1LDE5LjkxMy03My42NzMtMC41OTVsMCwwYy0yMC41MDgtMjAuNTA4LTIwLjc3My01My40OTMtMC41OTQtNzMuNjcyDQoJbDE4OS45OTktMTkwYzIwLjE3OC0yMC4xNzgsNTMuMTY0LTE5LjkxMyw3My42NzIsMC41OTVsMCwwYzIwLjUwOCwyMC41MDksMjAuNzcyLDUzLjQ5MiwwLjU5NSw3My42NzFMMjkzLjc1MSw0NTUuODY4eiIvPg0KPHBhdGggZmlsbD0iI0ZGRkZGRiIgZD0iTTIyMC4yNDksNDU1Ljg2OGMyMC4xOCwyMC4xNzksNTMuMTY0LDE5LjkxMyw3My42NzItMC41OTVsMCwwYzIwLjUwOS0yMC41MDgsMjAuNzc0LTUzLjQ5MywwLjU5Ni03My42NzINCglsLTE5MC0xOTBjLTIwLjE3OC0yMC4xNzgtNTMuMTY0LTE5LjkxMy03My42NzEsMC41OTVsMCwwYy0yMC41MDgsMjAuNTA5LTIwLjc3Miw1My40OTItMC41OTUsNzMuNjcxTDIyMC4yNDksNDU1Ljg2OHoiLz4NCjwvc3ZnPg0K" />
+        </a>
+      </div>
+    </div>
+    <div class="col-xs-6 col-md-2 col-md-pull-8">
+      <div class="col-xs-12">
+        <a href="/about">
+          <div id="accent4" class="header-box is-small">
+            <div class="header-box-content">
+              <div class="header-box-text">
+                About
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="col-xs-12">
+        <a href="/blog">
+          <div id="accent3" class="header-box is-small">
+            <div class="header-box-content">
+              <div class="header-box-text">
+                Blog
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+    <div class="col-xs-6 col-md-2">
+      <div class="col-xs-12">
+        <a href="/resume">
+          <div id="accent3" class="header-box is-small">
+            <div class="header-box-content">
+              <div class="header-box-text">
+                Resume
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="col-xs-12">
+        <a href="/projects">
+          <div id="accent4" class="header-box is-small">
+            <div class="header-box-content">
+              <div class="header-box-text">
+                Projects
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="content" class="home-recent-post">
+  {{ page.latest_post }}
+  <section class="subscribe-form">
+    <h3 class="subscribe-form-title">Subscribe to {{ site_name }}</h3>
+    <p>Get the latest posts delivered right to your inbox</p>
+
+  </section>
+</section>
+
+{{ page.footer }}

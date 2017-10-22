@@ -1,0 +1,13 @@
+name: Barbz
+type: theme
+description: 'A theme that powers barbarito.me.'
+version: 0.01
+core: 8.x
+
+libraries:
+  - barbz/base
+
+regions:
+  navbar: 'Nav bar'
+  footer: 'Footer'
+  latest_post: 'Latest Post'
