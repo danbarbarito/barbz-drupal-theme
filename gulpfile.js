@@ -13,7 +13,7 @@ var browserify = require('browserify'),
 var entryPoint = './lib/main.js',
     sassWatchPath = './sass/**/*.scss',
     jsWatchPath = './lib/**/*.js',
-    templateWatchPath = './templates/**/*.twig';
+    templateWatchPath = ['*.theme', '*.yml', './templates/**/*.twig'];
 /**/
 
 var onError = function (err) {
@@ -44,8 +44,8 @@ gulp.task('browser-sync', function () {
   return browserSync(config);
 });
 
-gulp.task('drush:cc', function() {
-  exec('drush cc render');
+gulp.task('drush:cr', function() {
+  exec('drush cr');
 });
 
 gulp.task('sass', function () {
@@ -68,7 +68,7 @@ gulp.task('sass', function () {
 gulp.task('watch', function () {
   gulp.watch(jsWatchPath, ['js']);
   gulp.watch(sassWatchPath, ['sass']);
-  gulp.watch(templateWatchPath, ['drush:cc', function() { browserSync.reload(); }]);
+  gulp.watch(templateWatchPath, ['drush:cr', function() { browserSync.reload(); }]);
 });
 
 gulp.task('run', ['js', 'sass', 'watch', 'browser-sync']);

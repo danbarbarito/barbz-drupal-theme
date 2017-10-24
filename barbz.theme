@@ -1,17 +1,17 @@
 <?php
 
-  use Drupal\File;
-
   function barbz_preprocess_page(&$variables) {
-    $variables['spoon'] = 'spooon';
     $variables['site_name'] = \Drupal::config('system.site')->get('name');
     $variables['site_slogan'] = \Drupal::config('system.site')->get('slogan');
   }
 
-  function barbz_preprocess_node(&$vars) {
-    if ($vars['node']->type == 'article') {
-      $vars['image_url'] = file_create_url($vars['node']->field_image->entity->uri->value);
-    }
+  function barbz_preprocess_menu(&$variables) {
+    $variables['site_name'] = \Drupal::config('system.site')->get('name');
+    $variables['site_slogan'] = \Drupal::config('system.site')->get('slogan');
+  }
+
+  function barbz_preprocess_node(&$variables) {
+
   }
 
 ?>

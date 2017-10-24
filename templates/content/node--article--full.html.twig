@@ -70,28 +70,30 @@
   *   in different view modes.
   */
   #}
-<article{{ attributes }}>
 
-  {{ title_prefix }}
-  {% if not page %}
-    <h2{{ title_attributes }}>
-      <a href="{{ url }}" rel="bookmark">{{ label }}</a>
-    </h2>
-  {% endif %}
-  {{ title_suffix }}
+<main id="site-main" class="site-main outer" role="main">
+  <div class="inner">
 
-  {% if display_submitted %}
-    <footer>
-      {{ author_picture }}
-      <div{{ author_attributes }}>
-        {% trans %}Submitted by {{ author_name }} on {{ date }}{% endtrans %}
-        {{ metadata }}
-      </div>
-    </footer>
-  {% endif %}
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 
-  <div{{ content_attributes }}>
-    {{ content }}
+    <article class="post-full">
+
+      <header class="post-full-header">
+        <section class="post-full-meta">
+          <time class="post-full-meta-date" datetime="{{date.content|date('Y-m-d')}}">{{date.content|date('d F Y')}}</time>
+
+        </section>
+        <h1 class="post-full-title">{{label}}</h1>
+      </header>
+
+      <figure class="post-full-image" style="background-image: url({{file_url(node.field_image.entity.uri.value)}})">
+      </figure>
+
+      <section class="post-full-content">
+        {{content.body}}
+      </section>
+
+    </article>
+
   </div>
-
-</article>
+</main>

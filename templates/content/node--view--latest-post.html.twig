@@ -83,15 +83,14 @@
   <div class="col-xs-12">
     <div class="home-recent-post-label">
       <div class="post-card">
-
         <article {{ attributes }}>
           <a class="post-card-image-link" href="{{url}}">
-            <div class="post-card-image" style="background-image: url({{image_url}})"></div>
+            <div class="post-card-image" style="background-image: url({{file_url(node.field_image.entity.uri.value)}})"></div>
           </a>
           <div {{ content_attributes }} class="post-card-content">
             <a class="post-card-content-link" href="{{url}}">
               <header class="post-card-header">
-                <span class="post-card-tags">{{content.field_tags}}</span>
+                <span class="post-card-tags">{{content.field_tags[0]["#title"]}}</span>
                 <h2 class="post-card-title">{{label}}</h2>
               </header>
               <section class="post-card-excerpt">
@@ -103,7 +102,6 @@
             </footer>
           </div>
         </article>
-
       </div>
     </div>
   </div>
