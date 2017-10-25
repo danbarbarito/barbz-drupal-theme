@@ -101,7 +101,7 @@
           <time class="post-full-meta-date" datetime="{{date.content|date('Y-m-d')}}">{{date.content|date('d F Y')}}</time>
 
         </section>
-        <h1 class="post-full-title">{{label}}</h1>
+        <h1 class="post-full-title"><span class="post-full-tag">{{content.field_tags[0]['#title']}}::</span>{{label}}</h1>
         {{title_suffix}}
       </header>
 

@@ -8,8 +8,6 @@ libraries:
   - barbz/base
 
 regions:
-  content: 'Main Content'
   navbar: 'Nav bar'
+  content: 'Main Content'
   footer: 'Footer'
-  latest_post: 'Latest Post'
-  subscribe: 'Subscribe Form'

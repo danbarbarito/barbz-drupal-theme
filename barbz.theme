@@ -1,7 +1,7 @@
 <?php
 
   function barbz_preprocess(&$variables) {
-    $variables['site_base_url'] = \Drupal::request()->getHost();
+    $variables['site_base_url'] = \Drupal::request()->getSchemeAndHttpHost();
     $variables['site_name'] = \Drupal::config('system.site')->get('name');
     $variables['site_slogan'] = \Drupal::config('system.site')->get('slogan');
   }
