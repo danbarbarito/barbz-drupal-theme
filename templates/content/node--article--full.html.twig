@@ -71,12 +71,30 @@
   */
   #}
 
+<div class="floating-header">
+  <div class="floating-header-logo">
+    <a href="{{site_base_url}}">
+      <span>{{site_name}}</span>
+    </a>
+  </div>
+  <span class="floating-header-divider">&mdash;</span>
+  <div class="floating-header-title">{{label}}</div>
+  <div class="floating-header-share">
+
+  </div>
+  <progress class="progress" value="0">
+    <div class="progress-container">
+      <span class="progress-bar"></span>
+    </div>
+  </progress>
+</div>
+
 <main id="site-main" class="site-main outer" role="main">
   <div class="inner">
 
     <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 
-    <article class="post-full">
+    <article {{attributes.addClass('post-full')}}>
 
       <header class="post-full-header">
         <section class="post-full-meta">
@@ -84,12 +102,13 @@
 
         </section>
         <h1 class="post-full-title">{{label}}</h1>
+        {{title_suffix}}
       </header>
 
       <figure class="post-full-image" style="background-image: url({{file_url(node.field_image.entity.uri.value)}})">
       </figure>
 
-      <section class="post-full-content">
+      <section {{content_attributes.addClass('post-full-content')}}>
         {{content.body}}
       </section>
 

@@ -394,3 +394,7 @@ footer i {
 .post-full-content {
   font-size: 1.4em;
 }
+
+.nav > li > a:hover, .nav > li > a:focus {
+  background-color: transparent;
+}

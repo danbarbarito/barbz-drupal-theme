@@ -4,6 +4,10 @@ base:
     theme:
       css/global-styling.css: {}
   js:
+    js/vendor/init.js: {}
+    js/vendor/fitvids.js: {}
+    js/vendor/smoothscroll.js: {}
+    js/vendor/barbz.js: {}
     js/global-script.js: {}
   dependencies:
     - core/jquery
