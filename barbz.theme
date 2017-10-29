@@ -6,4 +6,11 @@
     $variables['site_slogan'] = \Drupal::config('system.site')->get('slogan');
   }
 
+  function barbz_preprocess_node(&$variables) {
+    /* $nodeType = $variables['node']->getType();
+     * if ($nodeType == 'resume') {
+     *
+     * }*/
+  }
+
 ?>

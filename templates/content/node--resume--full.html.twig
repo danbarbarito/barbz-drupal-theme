@@ -1,0 +1,393 @@
+{#
+  /**
+  * @file
+  * Theme override to display a node.
+  *
+  * Available variables:
+  * - node: The node entity with limited access to object properties and methods.
+  *   Only method names starting with "get", "has", or "is" and a few common
+  *   methods such as "id", "label", and "bundle" are available. For example:
+  *   - node.getCreatedTime() will return the node creation timestamp.
+  *   - node.hasField('field_example') returns TRUE if the node bundle includes
+  *     field_example. (This does not indicate the presence of a value in this
+  *     field.)
+  *   - node.isPublished() will return whether the node is published or not.
+  *   Calling other methods, such as node.delete(), will result in an exception.
+  *   See \Drupal\node\Entity\Node for a full list of public properties and
+  *   methods for the node object.
+  * - label: The title of the node.
+  * - content: All node items. Use {{ content }} to print them all,
+  *   or print a subset such as {{ content.field_example }}. Use
+  *   {{ content|without('field_example') }} to temporarily suppress the printing
+  *   of a given child element.
+  * - author_picture: The node author user entity, rendered using the "compact"
+  *   view mode.
+  * - metadata: Metadata for this node.
+  * - date: Themed creation date field.
+  * - author_name: Themed author name field.
+  * - url: Direct URL of the current node.
+  * - display_submitted: Whether submission information should be displayed.
+  * - attributes: HTML attributes for the containing element.
+  *   The attributes.class element may contain one or more of the following
+  *   classes:
+  *   - node: The current template type (also known as a "theming hook").
+  *   - node--type-[type]: The current node type. For example, if the node is an
+  *     "Article" it would result in "node--type-article". Note that the machine
+  *     name will often be in a short form of the human readable label.
+  *   - node--view-mode-[view_mode]: The View Mode of the node; for example, a
+  *     teaser would result in: "node--view-mode-teaser", and
+  *     full: "node--view-mode-full".
+  *   The following are controlled through the node publishing options.
+  *   - node--promoted: Appears on nodes promoted to the front page.
+  *   - node--sticky: Appears on nodes ordered above other non-sticky nodes in
+  *     teaser listings.
+  *   - node--unpublished: Appears on unpublished nodes visible only to site
+  *     admins.
+  * - title_attributes: Same as attributes, except applied to the main title
+  *   tag that appears in the template.
+  * - content_attributes: Same as attributes, except applied to the main
+  *   content tag that appears in the template.
+  * - author_attributes: Same as attributes, except applied to the author of
+  *   the node tag that appears in the template.
+  * - title_prefix: Additional output populated by modules, intended to be
+  *   displayed in front of the main title tag that appears in the template.
+  * - title_suffix: Additional output populated by modules, intended to be
+  *   displayed after the main title tag that appears in the template.
+  * - view_mode: View mode; for example, "teaser" or "full".
+  * - teaser: Flag for the teaser state. Will be true if view_mode is 'teaser'.
+  * - page: Flag for the full page state. Will be true if view_mode is 'full'.
+  * - readmore: Flag for more state. Will be true if the teaser content of the
+  *   node cannot hold the main body content.
+  * - logged_in: Flag for authenticated user status. Will be true when the
+  *   current user is a logged-in member.
+  * - is_admin: Flag for admin user status. Will be true when the current user
+  *   is an administrator.
+  *
+  * @see template_preprocess_node()
+  *
+  * @todo Remove the id attribute (or make it a class), because if that gets
+  *   rendered twice on a page this is invalid CSS for example: two lists
+  *   in different view modes.
+  */
+  #}
+
+{{attach_library('barbz/resume')}}
+
+<main id="site-main" class="site-main outer" role="main">
+  <div class="inner">
+
+    <!--wrapper start-->
+    <div>
+      <!--contents start-->
+      <section id="contents">
+
+        <!--main start-->
+        <div id="main">
+
+          <!--section start-->
+          <div class="section">
+
+            <h5>Work Experience</h5>
+
+            <!--work_item start-->
+            <div class="work_item">
+
+              <div class="year">Feb 2017 - Present</div>
+
+              <h3>Mission Disrupt</h3>
+
+              <h6>Full Stack Web Developer</h6>
+
+              <br />
+
+              <ul class="job_description">
+                <li>Worked with clients to create visually stunning and feature rich websites</li>
+                <li>Integrated third party APIs into applications</li>
+                <li>Improved client website page speed by optimizing scripts, altering images, and cleaning up CSS</li>
+                <li>Raised client website search ranking by adding more relevant content and adding required HTML tags</li>
+                <li>Technology used: Ruby on Rails, Javascript, Wordpress, Drupal, WooCommerce, CSS </li>
+              </ul>
+
+            </div>
+            <!--portfolio_item end-->
+
+            <!--work_item start-->
+            <div class="work_item">
+
+              <div class="year">Jul 2015 - Jan 2017</div>
+
+              <h3>Rogue Pod</h3>
+              <em style="font-size: 12px">(Formally known as Dolphin Micro, Inc)</em>
+
+              <h6>Full Stack Web Developer</h6>
+
+              <br />
+
+              <ul class="job_description">
+                <li>Created custom websites and applications for clients</li>
+                <li>Held meetings with clients to discuss how how certain features can be implemented, how long those features would take, etc.</li>
+                <li>Designed user interfaces that are both visually pleasing and provide a great user experience</li>
+                <li>Added and improved functionality to a number of high traffic websites</li>
+                <li>Lead the development of an Android & iOS application which was developed using React-Native</li>
+                <li>Created an open source custom chat application for a client to use which had direct message and group message capabilities. The application was built using Ruby on Rails, Javascript, and Websockets. Doing this allowed the client to move away from a third party solution and save on costs. The source code can be found here: <a href="https://github.com/danielbarbarito/actionchat" target="_blank">https://github.com/danielbarbarito/actionchat</a></li>
+                <li>Technology used: Ruby on Rails, Javascript, React.js, React-Native, CSS </li>
+              </ul>
+
+            </div>
+            <!--portfolio_item end-->
+
+            <!--work_item start-->
+            <div class="work_item">
+
+              <div class="year">May 2015 - June 2015</div>
+
+              <h3>Dolphin Micro, Inc. - Custom Web & Mobile Software</h3>
+
+              <h6>Full Stack Web Developer</h6>
+
+              <br />
+
+              <ul class="job_description">
+                <li>Created custom websites and applications for clients</li>
+                <li>Held meetings with clients to discuss how how certain features can be implemented, how long those features would take, etc.</li>
+                <li>Designed user interfaces that are both visually pleasing and provide a great user experience</li>
+                <li>Added and improved functionality to a number of high traffic websites</li>
+                <li>Lead the development of an education platform which was built in Flash</li>
+                <li>Technology used: Ruby on Rails, Javascript, React.js, Flash, Actionscript, CSS</li>
+              </ul>
+
+            </div>
+            <!--portfolio_item end-->
+
+            <!--work_item start-->
+            <div class="work_item">
+
+              <div class="year">Sep 2014 - May 2015</div>
+
+              <h3>Adelphi University</h3>
+
+              <h6>Web Team</h6>
+
+              <br />
+
+              <ul class="job_description">
+                <li>Added and updated content throughout Adelphi.edu</li>
+                <li>Lead development on a Wordpress plugin that was designed to make repetitive tasks easier and less time consuming</li>
+                <li>Created and altered a variety of images using Photoshop that was used to advertise events and promotional offers</li>
+                <li>Technology used: Wordpress, Javascript, CSS</li>
+              </ul>
+
+            </div>
+            <!--portfolio_item end-->
+
+          </div>
+          <!--section end-->
+
+
+          <div class="clearfix"></div>
+          <br />
+          <!--section start-->
+          <div class="section">
+
+            <h5>Portfolio</h5>
+
+            <!--portfolio_item start-->
+            <div class="portfolio_item">
+              <h3>PairBlock</h3>
+
+              <h6><a href="http://pairblock.com" target="_blank">pairblock.com</a></h6>
+
+              <br />
+
+              <p>Project management tool that forces users to break down tasks into small, manageable pieces.</p>
+
+
+            </div>
+            <!--portfolio_item end-->
+
+            <!--portfolio_item start-->
+            <div class="portfolio_item">
+              <h3>ActionChat</h3>
+
+              <h6><a href="https://github.com/danielbarbarito/actionchat">https://github.com/danielbarbarito/actionchat</a></h6>
+
+              <br />
+
+              <p>Open source chat application built in Ruby on Rails using Websockets that supports direct messages and group messages.</p>
+
+
+            </div>
+            <!--portfolio_item end-->
+
+          </div>
+          <!--section end-->
+
+
+
+
+
+        </div>
+        <!--main end-->
+
+
+        <!--sidebar start-->
+        <aside id="sidebar">
+
+          <!--section start-->
+          <div class="section">
+
+            <h5>Contact Information</h5>
+
+
+            <!--Contact_Info_items start-->
+            <div class="contact_Info_items">
+
+              <ul>
+
+                <li>Website: <a href="http://barbarito.me">barbarito.me</a></li>
+
+                <li>Email: <a href="mailto://dan@barbarito.me">dan@barbarito.me</a></li>
+
+                <li>Phone: <a href="tel:5166608201">516-660-8201</a></li>
+
+                <li>Location: <a href="">West Hempstead, NY 11552</a></li>
+
+                <li><a target="_blank" href="/assets/files/dan-barbarito-resume.docx">download resume</a></li>
+
+              </ul>
+
+            </div>
+            <!--Contact_Info_items end-->
+
+          </div>
+          <!--section end-->
+
+
+          <!--section start-->
+          <div class="section">
+
+
+            <h5>Education</h5>
+
+            <!--education_items start-->
+            <div class="education_items">
+
+              <h6 class="bold">Bachelor of Science in Computer Science - May 2017</h6>
+
+              <p>Adelphi University - Garden City, New York</p>
+
+
+            </div>
+            <!--education_items end-->
+
+
+          </div>
+          <!--section end-->
+
+
+          <div class="clearfix"></div>
+
+
+          <!--section start-->
+          <div class="section">
+
+            <h5>Skills</h5>
+
+
+            <!--skills start-->
+            <div class="skills">
+
+
+              <ul>
+                <li>HTML5</li>
+
+                <li>CSS3/Sass/Stylus/LESS</li>
+
+                <li>Javascript/ES6</li>
+
+                <li>Coffeescript</li>
+
+                <li>jQuery</li>
+
+                <li>React.js</li>
+
+                <li>React-Native</li>
+
+                <li>Ember.js</li>
+
+                <li>Wordpress</li>
+
+                <li>Drupal</li>
+
+                <li>Ruby</li>
+
+              </ul>
+
+            </div>
+            <!--skills end-->
+
+
+            <!--skills start-->
+            <div class="skills">
+
+
+              <ul>
+
+                <li>Ruby on Rails</li>
+
+                <li>Go</li>
+
+                <li>MySQL</li>
+
+                <li>PostgreSQL</li>
+
+                <li>SQLite</li>
+
+                <li>MongoDB</li>
+
+                <li>Linux</li>
+
+                <li>Git</li>
+
+                <li>Amazon Web Services</li>
+
+                <li>Adobe Photoshop</li>
+
+                <li>Project Management</li>
+
+              </ul>
+
+
+            </div>
+            <!--skills end-->
+
+
+          </div>
+          <!--section end-->
+
+
+
+          <div class="clearfix"></div>
+
+
+
+
+        </aside>
+        <!--sidebar end-->
+
+
+
+
+
+
+        <div style="clear:both;"></div>
+
+	    </section>
+      <!--contents end-->
+    </div>
+    <!--wrapper end-->
+  </div>
+  <!--wrapper end-->
+
+  </div>
+</main>

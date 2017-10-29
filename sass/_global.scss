@@ -22,6 +22,11 @@ pre[class*=language-] code {
   overflow: scroll !important;
 }
 
+main {
+  padding-top: 60px;
+  min-height: 400px;
+}
+
 * { box-sizing: border-box; }
 .video-background {
   background: #000;
@@ -288,10 +293,6 @@ body {
   margin-top: 50px;
 }
 
-.socal-links li:hover a {
-  background: rgba(255,255,255,.8);
-  border-radius: 25px;
-}
 
 .socal-links li:hover .fa-github {
   color: #333;
@@ -404,5 +405,58 @@ footer i {
   font-weight: 100;
   font-size: .9em;
   letter-spacing: 4px;
-  margin: -7px;
+}
+
+.post-full-content img, .post-full-content video {
+  max-width: 100%;
+}
+
+.post-feed > div {
+  display: flex;
+  flex-grow: 1;
+}
+
+.post-comments {
+
+  margin-top: 60px;
+  margin-bottom: 60px;
+
+  article.js-comment {
+    padding: 20px;
+    border: 1px solid #f5f5f5;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.06);
+
+    &:nth-of-type(even) {
+      background: #fbfbfb;
+    }
+
+    .links.inline {
+      list-style: none;
+      display: inline-block;
+      margin-top: 20px;
+      font-size: 12px;
+    }
+
+    footer {
+      margin-top: 0px;
+      font-size: 11px;
+      font-weight: 500;
+    }
+
+    p {
+      margin-bottom: 0px;
+    }
+
+  }
+
+}
+
+.post-card {
+  min-height: 100px;
+}
+
+.label {
+  color: black;
 }

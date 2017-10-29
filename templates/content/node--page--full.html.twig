@@ -71,24 +71,6 @@
   */
   #}
 
-<div class="floating-header">
-  <div class="floating-header-logo">
-    <a href="{{site_base_url}}">
-      <span>{{site_name}}</span>
-    </a>
-  </div>
-  <span class="floating-header-divider">&mdash;</span>
-  <div class="floating-header-title">{{label}}</div>
-  <div class="floating-header-share">
-
-  </div>
-  <progress class="progress" value="0">
-    <div class="progress-container">
-      <span class="progress-bar"></span>
-    </div>
-  </progress>
-</div>
-
 <main id="site-main" class="site-main outer" role="main">
   <div class="inner">
 
@@ -97,27 +79,16 @@
     <article {{attributes.addClass('post-full')}}>
 
       <header class="post-full-header">
-        <section class="post-full-meta">
-          <time class="post-full-meta-date" datetime="{{node.getCreatedTime|date('Y-m-d')}}">{{node.getCreatedTime|date('d F Y')}}</time>
-        </section>
-        <h1 class="post-full-title"><span class="post-full-tag">{% if content.field_tags[0]['#title'] %} {{content.field_tags[0]['#title']}}:: {% endif %}</span>{{label}}</h1>
+
+        <h1 class="post-full-title">{{label}}</h1>
         {{title_suffix}}
       </header>
-
-      {% if node.field_image.entity.uri %}
-      <figure class="post-full-image" style="background-image: url({{file_url(node.field_image.entity.uri.value)}})">
-      </figure>
-      {% endif %}
 
       <section {{content_attributes.addClass('post-full-content')}}>
         {{content.body}}
       </section>
 
     </article>
-
-    <div class="post-comments">
-      {{content.comment}}
-    </div>
 
   </div>
 </main>

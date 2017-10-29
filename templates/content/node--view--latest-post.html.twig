@@ -74,9 +74,11 @@
 
 <div class="post-card">
   <article {{ attributes }}>
-    <a class="post-card-image-link" href="{{url}}">
+    {% if node.field_image.entity.uri %}
+      <a class="post-card-image-link" href="{{url}}">
       <div class="post-card-image" style="background-image: url({{file_url(node.field_image.entity.uri.value)}})"></div>
-    </a>
+      </a>
+    {% endif %}
     <div {{ content_attributes }} class="post-card-content">
       <a class="post-card-content-link" href="{{url}}">
         <header class="post-card-header">
