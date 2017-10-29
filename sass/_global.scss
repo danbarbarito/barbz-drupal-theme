@@ -84,21 +84,21 @@ main {
 	animation-name: bounce;
 }
 .animated{-webkit-animation-fill-mode:both;
-  -moz-animation-fill-mode:both;
-  -ms-animation-fill-mode:both;
-  -o-animation-fill-mode:both;
+          -moz-animation-fill-mode:both;
+          -ms-animation-fill-mode:both;
+          -o-animation-fill-mode:both;
 
-  animation-iteration-count: infinite;
-  -moz-animation-iteration-count: infinite;
-  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+          -moz-animation-iteration-count: infinite;
+          -webkit-animation-iteration-count: infinite;
 
-  animation-fill-mode:both;
-  -webkit-animation-duration:2s;
-  -moz-animation-duration:2s;
-  -ms-animation-duration:2s;
-  -o-animation-duration:2s;
-  animation-duration:2s;
-}
+          animation-fill-mode:both;
+          -webkit-animation-duration:2s;
+          -moz-animation-duration:2s;
+          -ms-animation-duration:2s;
+          -o-animation-duration:2s;
+          animation-duration:2s;
+         }
 
 
 @-webkit-keyframes bounce {
@@ -459,4 +459,40 @@ footer i {
 
 .label {
   color: black;
+}
+
+#block-userlogin {
+  background: black;
+  text-align: center;
+  min-height: 120px;
+
+  * {
+    margin: 0;
+    display: inline-block;
+  }
+
+  label {
+    color: white;
+    font-size: 14px;
+  }
+
+  a {
+    font-size: 12px;
+    padding-right: 20px;
+  }
+
+  input[type="text"], input[type="password"] {
+    background: transparent;
+    color: white;
+  }
+
+  input[type="submit"] {
+    border: none;
+    border-radius: 7px;
+    padding-left: 10px;
+    padding-right: 10px;
+    background: #239cdc;
+    color: white;
+  }
+
 }
