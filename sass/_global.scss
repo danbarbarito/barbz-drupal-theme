@@ -1,3 +1,4 @@
+// scss-lint:disable all
 body {
   font-family: 'Montserrat', sans-serif !important;
 }
@@ -499,4 +500,8 @@ footer i {
 
 #block-useraccountmenu .site-nav-logo {
   display: none;
+}
+
+#auth_box {
+  min-width: 300px;
 }
