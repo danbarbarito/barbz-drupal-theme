@@ -87,6 +87,9 @@
         <section class="post-card-excerpt">
           <p>{{node.body.summary}}</p>
         </section>
+        <section class="post-full-meta-date">
+          <p>{{node.getCreatedTime|date('d F Y')}}</p>
+        </section>
       </a>
     </div>
   </article>
