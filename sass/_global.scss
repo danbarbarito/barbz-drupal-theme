@@ -24,7 +24,7 @@ pre[class*=language-] code {
 }
 
 main {
-  padding-top: 60px;
+  padding-top: 10px;
   min-height: 400px;
 }
 
@@ -323,7 +323,7 @@ body {
   color: #003087;
 }
 
-.home-recent-post {
+section#content {
   min-height: 500px;
   background: white;
   z-index: 101;
@@ -508,4 +508,30 @@ footer i {
 
 #auth_box {
   min-width: 300px;
+}
+
+.btn-hire-me {
+  box-sizing: border-box;
+  width: 80%;
+  margin-left: 10%;
+  height: 100px;
+  margin: auto;
+  border: 2px solid black;
+  text-align: center;
+  line-height: 100px;
+  color: black;
+  text-decoration: none;
+  border-radius: 3px;
+  letter-spacing: 10px;
+  transition: all .2s ease-out;
+  padding: 0;
+  font-size: 12px;
+  &:hover {
+    border-bottom: 4xpx solid rgba(0,0,0,.85);
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    color: rgba(0,0,0,.85);
+    font-weight: bold;
+    font-size: 16px;
+  }
 }

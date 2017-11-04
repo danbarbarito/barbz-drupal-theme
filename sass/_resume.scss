@@ -1,4 +1,10 @@
-/*
+.resume-wrapper {
+
+  div[class^='col-'] {
+    padding: 20px;
+  }
+
+  /*
 
    CSS File TOC
    ------------------------
@@ -63,10 +69,12 @@ h1 {
 }
 
 h2 {
-  font-size:40px;
-  text-align:left;
+  font-size:25px;
+  text-align:center;
   font-weight:bold;
   line-height:50px;
+  border-radius: 3px;
+  box-shadow: 0px 4px 6px 0px rgba(0, 0, 0, 0.06);
 }
 
 h3 {
@@ -581,4 +589,6 @@ ul.testimonialList cite {
 .job_description > li{
   list-style: disc;
   margin-left: 30px;
+}
+
 }

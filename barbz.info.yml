@@ -10,4 +10,5 @@ libraries:
 regions:
   navbar: 'Nav bar'
   content: 'Main Content'
+  sidebar: 'Sidebar'
   footer: 'Footer'
