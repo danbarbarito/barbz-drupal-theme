@@ -36,7 +36,9 @@
 
   .button {
     color: white !important;
-    background: rgb(0, 129, 255);
+    background: #038bff;
+    border: 3px solid #72beff;
+    border-radius: 5px;
   }
 
   h1,
@@ -171,6 +173,9 @@
     bottom: 30px;
     left: 50%;
     margin-left: -20px;
+    img {
+      height: 25px;
+    }
   }
 
   @media only screen and (max-width: 768px) and (min-height: 600px) {
@@ -301,7 +306,7 @@
 
   .header-box.is-small {
     min-height: 250px;
-    height: 50vh;
+    height: 25vh;
     max-height: 600px;
     background: rgba(0, 0, 0, .85);
     border: 1px solid transparent;
@@ -349,7 +354,7 @@
 
   .header-box.is-large {
     min-height: 500px;
-    height: 100vh;
+    height: 50vh;
     max-height: 1200px;
     color: white;
     background: rgba(0, 0, 0, .7);
@@ -436,7 +441,11 @@
   }
 
   .socal-links li:hover .fa-github {
-    color: #333;
+    color: #fafafa;
+  }
+
+  .socal-links li:hover .fa-gitlab {
+    color: #fca326;
   }
 
   .socal-links li:hover .fa-linkedin {
@@ -539,7 +548,7 @@
   }
 
   .post-full-content {
-    font-size: 1.4em;
+    font-size: 14px;
   }
 
   .nav>li>a:hover,
@@ -658,4 +667,22 @@
   .hire-me {
     margin-top: 40px;
     margin-bottom: 40px;
+  }
+
+  .post-comments * {
+    text-align: center;
+  }
+
+  .post-comments label {
+    width: 100%;
+  }
+
+  .post-comments input {
+    text-align: left;
+    border-radius: 5px;
+    border: 1px solid #d7d7d7;
+  }
+
+  .form-wrapper {
+    margin-bottom: 20px;
   }

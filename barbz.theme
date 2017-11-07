@@ -1,16 +1,16 @@
 <?php
 
-  function barbz_preprocess(&$variables) {
+function barbz_preprocess(&$variables)
+{
     $variables['site_base_url'] = \Drupal::request()->getSchemeAndHttpHost();
     $variables['site_name'] = \Drupal::config('system.site')->get('name');
     $variables['site_slogan'] = \Drupal::config('system.site')->get('slogan');
-  }
+}
 
-  function barbz_preprocess_node(&$variables) {
+function barbz_preprocess_node(&$variables)
+{
     /* $nodeType = $variables['node']->getType();
-     * if ($nodeType == 'resume') {
-     *
-     * }*/
-  }
-
-?>
+   * if ($nodeType == 'resume') {
+   *
+   * }*/
+}
