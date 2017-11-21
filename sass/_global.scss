@@ -37,8 +37,12 @@
   .button {
     color: white !important;
     background: #038bff;
-    border: 3px solid #72beff;
+    border: 1px solid #72beff;
     border-radius: 5px;
+    margin-top: 12px;
+    padding: 8px;
+    padding-left: 10px;
+    padding-right: 10px;
   }
 
   h1,
@@ -305,6 +309,7 @@
   }
 
   .header-box.is-small {
+    transition: all .5s;
     min-height: 250px;
     height: 25vh;
     max-height: 600px;
@@ -574,31 +579,42 @@
   }
 
   .post-comments {
+    text-align: center;
     margin-top: 60px;
     margin-bottom: 60px;
-    article.js-comment {
-      padding: 20px;
-      border: 1px solid #f5f5f5;
-      margin-bottom: 10px;
-      border-radius: 10px;
-      box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.06);
-      &:nth-of-type(even) {
-        background: #fbfbfb;
+    textarea {
+      text-align: left !important;
+    } 
+  }
+
+  article.js-comment {
+    padding: 20px;
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    margin-bottom: 10px;
+    border-radius: 10px;
+    box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.06);
+    &:nth-of-type(even) {
+      background-color: #fbfbfb;
+    }
+    .links.inline {
+      list-style: none;
+      display: inline-block;
+      margin-top: 20px;
+      font-size: 12px;
+      li {
+      	display: inline !important;
       }
-      .links.inline {
-        list-style: none;
-        display: inline-block;
-        margin-top: 20px;
-        font-size: 12px;
-      }
-      footer {
-        margin-top: 0px;
-        font-size: 11px;
-        font-weight: 500;
-      }
-      p {
-        margin-bottom: 0px;
-      }
+    }
+    footer {
+      margin-top: 0px;
+      font-size: 11px;
+      font-weight: 500;
+    }
+    p {
+      margin-bottom: 0px;
+    }
+    a {
+      color: #101982 !important;
     }
   }
 
@@ -650,16 +666,27 @@
   }
 
   .btn-hire-me {
-    background: rgb(40, 84, 107);
-    border: 2px solid #aecfdf;
+    background: #007991;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #78ffd6, #007991);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #78ffd6, #007991);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     border-radius: .3em;
     color: #fff;
     font-size: 18px;
     padding: 0.2em 1em;
     margin: 0.25em 0;
     min-width: 7em;
+    transition: 1s all;
     &:hover {
-      background: darken(rgb(40, 84, 107), 20);
+      font-size: 25px;
+      background: darken(#007991, 20);
+      /* fallback for old browsers */
+      background: -webkit-linear-gradient(to right, darken(#78ffd6, 20), darken(#007991, 20));
+      /* Chrome 10-25, Safari 5.1-6 */
+      background: linear-gradient(to right, darken(#78ffd6, 20), darken(#007991, 20));
+      /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
       color: white;
     }
   }
@@ -669,15 +696,15 @@
     margin-bottom: 40px;
   }
 
-  .post-comments * {
+  .comment-comment-form * {
     text-align: center;
   }
 
-  .post-comments label {
+  .comment-comment-form label {
     width: 100%;
   }
 
-  .post-comments input {
+  input {
     text-align: left;
     border-radius: 5px;
     border: 1px solid #d7d7d7;
@@ -685,4 +712,16 @@
 
   .form-wrapper {
     margin-bottom: 20px;
+  }
+
+  .form-item--error-message {
+    color: red;
+  }
+
+  .filter-help {
+    width: 100%;
+  }
+
+  .links-inline li {
+    display: inline;
   }
