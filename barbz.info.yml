@@ -12,3 +12,7 @@ regions:
   content: 'Main Content'
   sidebar: 'Sidebar'
   footer: 'Footer'
+  cta1: 'Call to Action 1'
+  cta1_description: 'Call to Action 1 Description'
+  cta2: 'Call to Action 2'
+  cta2_description: 'Call to Action 2 Description'
