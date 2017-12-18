@@ -71,26 +71,53 @@
   */
   #}
 
-<div class="post-card">
-  <article {{ attributes }}>
-    {% if node.field_image.entity.uri %}
-    <a class="post-card-image-link" href="{{url}}">
-      <div class="post-card-image" style="background-image: url({{file_url(node.field_image.entity.uri.value)}})"></div>
+<div class="floating-header">
+  <div class="floating-header-logo">
+    <a href="{{site_base_url}}">
+      <span>{{site_name}}</span>
     </a>
-    {% endif %}
-    <div {{ content_attributes }} class="post-card-content">
-      <a class="post-card-content-link" href="{{url}}">
-        <header class="post-card-header">
-          <span class="post-card-tags">{{content.field_tags[0]["#title"]}}</span>
-          <h2 class="post-card-title">{{label}}</h2>
-        </header>
-        <section class="post-card-excerpt">
-          <p>{{node.body.summary}}</p>
-        </section>
-        <section class="post-full-meta-date">
-          <p>{{node.getCreatedTime|date('d F Y')}}</p>
-        </section>
-      </a>
+  </div>
+  <span class="floating-header-divider">&mdash;</span>
+  <div class="floating-header-title">{{label}}</div>
+  <div class="floating-header-share">
+
+  </div>
+  <progress class="progress" value="0">
+    <div class="progress-container">
+      <span class="progress-bar"></span>
     </div>
-  </article>
+  </progress>
 </div>
+
+<main id="site-main" class="site-main outer" role="main">
+  <div class="inner">
+
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+    <article {{attributes.addClass('post-full')}}>
+
+      <header class="post-full-header">
+        <section class="post-full-meta">
+          <time class="post-full-meta-date" datetime="{{node.getCreatedTime|date('Y-m-d')}}">{{node.getCreatedTime|date('d F Y')}}</time>
+        </section>
+        <h1 class="post-full-title"><span class="post-full-tag">{% if content.field_tags[0]['#title'] %} {{content.field_tags[0]['#title']}}:: {% endif %}</span>{{label}}</h1>
+        {{title_suffix}}
+      </header>
+
+      {% if node.field_image.entity.uri %}
+      <figure class="post-full-image" style="background-image: url({{file_url(node.field_image.entity.uri.value)}})">
+      </figure>
+      {% endif %}
+
+      <section {{content_attributes.addClass('post-full-content')}}>
+        {{content.body}}
+      </section>
+
+    </article>
+
+    <div class="post-comments">
+      {{content.comment}}
+    </div>
+
+  </div>
+</main>
