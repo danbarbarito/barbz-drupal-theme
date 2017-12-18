@@ -325,6 +325,9 @@ body {
   background: rgba(0, 0, 0, 0.85);
   border: 1px solid transparent;
   border-style: inset;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 @media screen and (max-width: 991px) {
   .header-box.is-small {
@@ -409,7 +412,6 @@ body {
 
 .header-box.is-small .header-box-content {
   position: relative;
-  top: 50%;
   font-size: 3.1rem;
 }
 
@@ -561,6 +563,11 @@ footer i {
 
 .post-full-content {
   font-size: 14px;
+}
+
+.socal-links ul {
+  margin: 0 !important;
+  padding: 0 !important;
 }
 
 .nav > li > a:focus,
@@ -748,10 +755,11 @@ input {
 
 .pattern-background {
   position: fixed;
-  min-width: 100%;
   min-height: 100%;
+  min-width: 1000px;
   width: auto;
   height: auto;
+  top: 0;
 }
 
 .check-these-out-categories-row {
