@@ -540,6 +540,10 @@ footer i {
   font-size: 22px !important;
 }
 @media only screen and (max-width: 768px) {
+  .socal-links li {
+    width: 31px !important;
+  }
+
   .socal-links i {
     font-size: 15px !important;
   }
