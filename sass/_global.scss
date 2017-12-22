@@ -768,7 +768,7 @@ input {
 
 .check-these-out-categories-row {
   text-align: center;
-  $checkoutColor: #356681;
+  $checkoutColor: #79a2b9;
 
   .check-these-out-categories {
     display: inline-block;
@@ -780,6 +780,7 @@ input {
     min-width: 90%;
     max-width: 2em;
     transition: 1s all;
+    border: 2px solid rgba(0,0,0,.4);
 
     h2 {
       margin: 10px;
