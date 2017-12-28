@@ -318,9 +318,8 @@ body {
 }
 
 .header-box.is-small {
-  transition: all 0.5s;
-  min-height: 250px;
-  height: 25vh;
+  min-height: 300px;
+  height: 50vh;
   max-height: 600px;
   background: rgba(0, 0, 0, 0.85);
   border: 1px solid transparent;
@@ -369,8 +368,11 @@ body {
 }
 
 .header-box.is-large {
-  min-height: 500px;
-  height: 50vh;
+  min-height: 450px;
+  @media only screen and (min-width: 991px) {
+    min-height: 600px;
+    height: 100vh;
+  }
   max-height: 1200px;
   color: white;
   background: rgba(0, 0, 0, 0.45);
@@ -773,30 +775,20 @@ input {
   .check-these-out-categories {
     display: inline-block;
     border-radius: 0.3em;
-    color: #fff;
+    color: black !important;
     font-size: 18px;
     padding: 0.2em 1em;
     margin: 0.25em 0;
     min-width: 90%;
     max-width: 2em;
     transition: 1s all;
-    border: 2px solid rgba(0,0,0,.4);
+    border: 2px solid black;
 
     h2 {
       margin: 10px;
 
       a {
-        color: white !important;
-      }
-    }
-    @for $i from 1 through 5 {
-      &:nth-child(#{$i}) {
-        background: linear-gradient(to right, darken($checkoutColor, 5 * $i), darken($checkoutColor, 1.5 * $i));
-      }
-
-      &:hover {
-        font-size: 25px;
-        background: linear-gradient(to right, darken($checkoutColor, 1 * $i), darken($checkoutColor, 4 * $i));
+        color: black !important;
       }
     }
   }
