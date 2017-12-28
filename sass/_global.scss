@@ -376,6 +376,10 @@ body {
   max-height: 1200px;
   color: white;
   background: rgba(0, 0, 0, 0.45);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
 }
 
 .header-box-search input {
@@ -415,11 +419,6 @@ body {
 .header-box.is-small .header-box-content {
   position: relative;
   font-size: 3.1rem;
-}
-
-.header-box.is-large .header-box-content {
-  position: relative;
-  top: 150px;
 }
 
 .home-support > .row {
@@ -547,7 +546,7 @@ footer i {
   }
 
   .socal-links i {
-    font-size: 15px !important;
+    font-size: 20px !important;
   }
 }
 
