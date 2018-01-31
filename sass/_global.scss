@@ -45,6 +45,7 @@ form {
 
 .button {
   transition: .3s all;
+  position: relative;
   color: black !important;
   background: #fff;
   border: 1px solid #72beff;
@@ -55,7 +56,8 @@ form {
   &:hover {
     color: white !important;
     background: #038bff;
-    transform: scale(1.2);
+    transform: scale(1.1);
+    z-index: 1000;
   }
 }
 
