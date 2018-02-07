@@ -1,7 +1,7 @@
 $(document).ready(function () {
   // Start fitVids
-  var $postContent = $(".post-full-content");
-  $postContent.fitVids();
+  // var $postContent = $(".post-full-content");
+  // $postContent.fitVids();
   // End fitVids
 
   var progressBar = document.querySelector('progress');
