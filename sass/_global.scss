@@ -731,7 +731,7 @@ article.js-comment {
   margin-bottom: 40px;
 }
 
-.comment-comment-form * {
+.comment-comment-form {
   text-align: center;
 }
 
@@ -803,4 +803,9 @@ input {
   .check-these-out-categories-row>div {
     width: 100% !important;
   }
+}
+
+.captcha {
+	width: 310px;
+	margin: 0 auto;
 }
